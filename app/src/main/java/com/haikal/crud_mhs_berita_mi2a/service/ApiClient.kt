@@ -9,7 +9,7 @@ import retrofit2.create
 import java.util.Arrays
 
 object ApiClient {
-    private const val BASE_URL = "http://10.126.38.166/berita/"
+    private const val BASE_URL = "http://192.168.1.15/berita/"
 
     private val client = OkHttpClient.Builder()
         .connectionSpecs(Arrays.asList(ConnectionSpec.CLEARTEXT, ConnectionSpec.MODERN_TLS))

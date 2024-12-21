@@ -33,7 +33,7 @@ class DetailBeritaActivity : AppCompatActivity() {
         val isi = intent.getStringExtra("isi_berita")
 
         judulDetail.text = judul
-        Glide.with(this).load("http://10.126.38.166/berita/image/" + gambar).centerCrop().into(imgDetail)
+        Glide.with(this).load("http://192.168.1.15/berita/image/" + gambar).centerCrop().into(imgDetail)
         tanggalDetail.text = tgl
         isiDetail.text = isi
 

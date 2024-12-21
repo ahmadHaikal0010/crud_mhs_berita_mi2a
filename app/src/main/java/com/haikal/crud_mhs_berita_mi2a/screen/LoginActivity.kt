@@ -20,8 +20,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,8 +38,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener() {
-            val username = etUsername.toString()
-            val password = etPassword.toString()
+            val username = etUsername.text.toString()
+            val password = etPassword.text.toString()
 
             // validasi input kosong
             if (username.isEmpty() || password.isEmpty()) {
@@ -66,9 +64,17 @@ class LoginActivity : AppCompatActivity() {
                                         "Login Success",
                                         Toast.LENGTH_SHORT
                                     ).show()
+
                                     //mau pindah ke page lain
                                     val toMain = Intent(this@LoginActivity, MainActivity::class.java)
                                     startActivity(toMain)
+                                } else {
+                                    // login gagal
+                                    Toast.makeText(
+                                        this@LoginActivity,
+                                        "Login Failed",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
                                 }
                             } else {
                                 val errorMessage = response.errorBody()?.string() ?: "Unknown Error"

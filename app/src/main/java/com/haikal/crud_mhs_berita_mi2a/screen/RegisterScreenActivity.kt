@@ -1,10 +1,12 @@
 package com.haikal.crud_mhs_berita_mi2a.screen
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +31,7 @@ class RegisterScreenActivity : AppCompatActivity() {
         val etEmail: EditText = findViewById(R.id.etEmail)
         val etPassword: EditText = findViewById(R.id.etPassword)
         val btnRegister: Button = findViewById(R.id.btnSubmit)
+        val txtSignIn: TextView = findViewById(R.id.txtSignIn)
 
         btnRegister.setOnClickListener() {
             // proses get data dari widget
@@ -85,6 +88,11 @@ class RegisterScreenActivity : AppCompatActivity() {
                     e
                 )
             }
+        }
+
+        txtSignIn.setOnClickListener() {
+            val intent = Intent(this@RegisterScreenActivity, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

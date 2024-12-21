@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen.RegisterScreenActivity">
+    tools:context=".screen.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,40 +17,22 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrasi User"
+            android:text="Login User"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="25sp"/>
 
         <EditText
-            android:id="@+id/etUsername"
+            android:id="@+id/etUsernameLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:hint="Enter your username"
+            android:hint="Enter your Username"
             android:layout_marginTop="10dp"/>
 
         <EditText
-            android:id="@+id/etFullName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Enter your Fullname"
-            android:layout_marginTop="10dp"/>
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="Enter your Email"
-            android:layout_marginTop="10dp"/>
-
-        <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -59,22 +41,20 @@
             android:layout_marginTop="10dp"/>
 
         <Button
-            android:id="@+id/btnSubmit"
+            android:id="@+id/btnLogin"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:text="Login"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:backgroundTint="#5650FA"/>
 
-    <TextView
-        android:id="@+id/txtSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Already have account? Sign In"
-        android:layout_marginTop="20dp"
-        android:textColor="#ff0000"/>
-
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have account? Sign Up"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff0000"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
